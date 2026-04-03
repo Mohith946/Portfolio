@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHITECT.V0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#00eefc",
+            "on-tertiary-fixed-variant": "#6d0061",
+            "surface-bright": "#2b2c2e",
+            "error-dim": "#d7383b",
+            "on-background": "#ffffff",
+            "on-secondary-container": "#f8f1ff",
+            "tertiary-fixed-dim": "#ff68e3",
+            "surface-container-low": "#121315",
+            "surface-container": "#181a1b",
+            "tertiary": "#ff59e3",
+            "on-secondary-fixed-variant": "#6300e2",
+            "on-tertiary-fixed": "#33002d",
+            "tertiary-dim": "#ff59e3",
+            "error-container": "#9f0519",
+            "inverse-surface": "#fbf9fa",
+            "outline-variant": "#474849",
+            "secondary-container": "#7000ff",
+            "on-primary-fixed": "#003f43",
+            "on-primary-container": "#005359",
+            "inverse-on-surface": "#555556",
+            "on-primary": "#005d63",
+            "on-error-container": "#ffa8a3",
+            "error": "#ff716c",
+            "secondary-dim": "#874cff",
+            "outline": "#757576",
+            "surface-dim": "#0d0e0f",
+            "primary-fixed": "#00eefc",
+            "surface-variant": "#242627",
+            "on-tertiary-container": "#1b0017",
+            "on-surface-variant": "#ababac",
+            "surface": "#0d0e0f",
+            "primary": "#8ff5ff",
+            "primary-fixed-dim": "#00deec",
+            "secondary-fixed": "#dac9ff",
+            "on-error": "#490006",
+            "on-secondary-fixed": "#41009a",
+            "on-secondary": "#290067",
+            "surface-container-highest": "#242627",
+            "surface-container-high": "#1e2021",
+            "surface-container-lowest": "#000000",
+            "secondary": "#ac89ff",
+            "inverse-primary": "#006a71",
+            "primary-dim": "#00deec",
+            "on-surface": "#ffffff",
+            "on-primary-fixed-variant": "#005e64",
+            "tertiary-container": "#ff05e5",
+            "surface-tint": "#8ff5ff",
+            "background": "#0d0e0f",
+            "secondary-fixed-dim": "#ceb9ff",
+            "on-tertiary": "#42003a",
+            "tertiary-fixed": "#ff85e4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Manrope", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

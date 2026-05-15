@@ -28,8 +28,8 @@ const Hero = () => {
         <section className="relative w-full h-[100vh] min-h-[700px] bg-[#050505] overflow-hidden flex flex-col items-center justify-center" id="home">
 
             {/* The Massive Background Text */}
-            <div className="absolute top-[20%] md:top-[15%] w-full z-0 font-headline font-black text-[18vw] sm:text-[14vw] md:text-[14vw] leading-[0.8] text-[#c9c9c9] tracking-[-0.05em] select-none flex justify-center w-full" style={textStyle}>
-                <h1 className="whitespace-normal sm:whitespace-nowrap text-center">HI, I'M MOHITH</h1>
+            <div className="absolute top-[20%] md:top-[15%] w-full z-0 font-headline font-black text-[15vw] sm:text-[12vw] md:text-[12vw] leading-[0.8] text-[#c9c9c9] tracking-[-0.05em] select-none flex justify-center w-full" style={textStyle}>
+                <h1 className="whitespace-normal sm:whitespace-nowrap text-center">HI, I'M MOHITH L A</h1>
             </div>
 
             {/* The 3D Character (Overlapping the text) */}
@@ -48,8 +48,8 @@ const Hero = () => {
                 <div className="w-full md:w-[400px]">
                     <p className="text-[#a0a0a0] text-[10px] md:text-xs leading-loose font-bold tracking-[0.15em] uppercase text-center md:text-left">
                         A COMPUTER SCIENCE STUDENT PASSIONATE<br />
-                        ABOUT CRAFTING BOLD AND<br />
-                        MEMORABLE PROJECTS 🚀
+                        ABOUT FULL-STACK DEVELOPMENT<br />
+                        AND AI-DRIVEN SYSTEMS 🚀
                     </p>
                 </div>
 

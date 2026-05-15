@@ -88,7 +88,7 @@ body {
 
 .projects-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 150px ;
+  font-size: clamp(4rem, 15vw, 150px);
   font-weight: 1000;
   letter-spacing: 3px;
   color: #eaeaea;

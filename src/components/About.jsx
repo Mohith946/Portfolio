@@ -36,17 +36,17 @@ const About = () => {
                 <div className="absolute top-[12%] left-[5%] md:left-[12%] text-7xl md:text-[10rem] animate-[bounce_5s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,255,255,0.2)] opacity-80 select-none grayscale contrast-200 -rotate-12">
                     🫧
                 </div>
-                {/* Bottom Left: Red Heart */}
-                <div className="absolute bottom-[20%] left-[8%] md:left-[20%] text-7xl md:text-[9rem] animate-[bounce_6s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,0,0,0.5)] opacity-80 select-none delay-1000 -rotate-12">
-                    ❤️
+                {/* Bottom Left: Laptop */}
+                <div className="absolute bottom-[20%] left-[8%] md:left-[20%] text-7xl md:text-[9rem] animate-[bounce_6s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,200,255,0.5)] opacity-80 select-none delay-1000 -rotate-12">
+                    💻
                 </div>
                 {/* Top Right: Blue Solid Fist / Box */}
                 <div className="absolute top-[15%] right-[5%] md:right-[15%] text-7xl md:text-[9rem] animate-[bounce_4s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,100,255,0.6)] opacity-80 select-none delay-500 rotate-[15deg]">
                     🧊
                 </div>
-                {/* Bottom Right: Purple Flower */}
-                <div className="absolute bottom-[25%] right-[8%] md:right-[20%] text-7xl md:text-[9rem] animate-[bounce_7s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(200,0,255,0.6)] opacity-80 select-none delay-700 -rotate-12">
-                    🌸
+                {/* Bottom Right: Rocket */}
+                <div className="absolute bottom-[25%] right-[8%] md:right-[20%] text-7xl md:text-[9rem] animate-[bounce_7s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,100,0,0.6)] opacity-80 select-none delay-700 -rotate-12">
+                    🚀
                 </div>
 
                 {/* Center Content Group */}
@@ -54,7 +54,7 @@ const About = () => {
                     
                     {/* Massive Single-Layer ABOUT ME */}
                     <div className="mb-6 flex justify-center w-full">
-                        <h2 className="text-[4rem] md:text-[10rem] whitespace-nowrap font-headline font-black uppercase tracking-tighter bg-gradient-to-b from-white to-[#a8a8a8] text-transparent bg-clip-text drop-shadow-2xl"
+                        <h2 className="text-[15vw] md:text-[10rem] whitespace-nowrap font-headline font-black uppercase tracking-tighter bg-gradient-to-b from-white to-[#a8a8a8] text-transparent bg-clip-text drop-shadow-2xl"
                            style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>
                             ABOUT ME
                         </h2>
@@ -91,7 +91,7 @@ const About = () => {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
                     {/* Left Typography */}
                     <div className="flex flex-col justify-center">
-                        <h2 className="text-[5rem] md:text-[6rem] leading-[0.85] font-headline font-black text-[#111111] uppercase tracking-[-0.05em] drop-shadow-sm">
+                        <h2 className="text-[16vw] sm:text-[5rem] md:text-[6rem] leading-[0.85] font-headline font-black text-[#111111] uppercase tracking-[-0.05em] drop-shadow-sm">
                             LET'S<br />GET IN<br />TOUCH
                         </h2>
                         <a href="mailto:mohithla24@gmail.com" className="mt-8 text-xl md:text-2xl font-bold font-body text-[#111111] underline underline-offset-[10px] decoration-2 decoration-gray-400 hover:decoration-purple-500 transition-colors w-max">

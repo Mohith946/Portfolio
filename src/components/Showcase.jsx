@@ -14,7 +14,7 @@ const Showcase = () => {
             <div className="flex flex-col gap-12 lg:gap-24 relative w-full pb-[100vh]">
 
                 {/* Project 01 */}
-                <article className="sticky top-[120px] z-10 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-2xl overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(143,245,255,0.05)]">
+                <article className="sticky top-[80px] md:top-[120px] z-10 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-2xl overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_0_50px_rgba(143,245,255,0.05)]">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-8 lg:px-12 lg:py-10 bg-[#08090a]">
                         <div className="flex items-center gap-6">
@@ -51,7 +51,7 @@ const Showcase = () => {
                 </article>
 
                 {/* Project 02 */}
-                <article className="sticky top-[240px] z-20 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-[0_-20px_50px_rgba(0,0,0,0.8)] overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(172,137,255,0.05)]">
+                <article className="sticky top-[100px] md:top-[240px] z-20 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-[0_-20px_50px_rgba(0,0,0,0.8)] overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(172,137,255,0.05)]">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-8 lg:px-12 lg:py-10 bg-[#08090a]">
                         <div className="flex items-center gap-6">
@@ -88,7 +88,7 @@ const Showcase = () => {
                 </article>
 
                 {/* Project 03 */}
-                <article className="sticky top-[360px] z-30 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-[0_-20px_50px_rgba(0,0,0,0.8)] overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(255,89,227,0.05)] bg-[#08090a]">
+                <article className="sticky top-[120px] md:top-[360px] z-30 w-full rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-[0_-20px_50px_rgba(0,0,0,0.8)] overflow-hidden pb-12 transition-all duration-500 hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(255,89,227,0.05)] bg-[#08090a]">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-8 lg:px-12 lg:py-10 bg-[#08090a]">
                         <div className="flex items-center gap-6">

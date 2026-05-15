@@ -29,23 +29,23 @@ const About = () => {
     return (
         <div className="w-full relative z-20">
             {/* The 3D Floating About Me Section */}
-            <section className="relative w-full h-[100vh] min-h-[900px] bg-[#050505] flex flex-col items-center justify-center overflow-hidden z-20" id="about">
+            <section className="relative w-full h-[100vh] min-h-[700px] md:min-h-[900px] bg-[#050505] flex flex-col items-center justify-center overflow-hidden z-20" id="about">
 
                 {/* Floating 3D-styled Emojis/Icons simulating the render shapes */}
                 {/* Top Left: Splash / Abstract Silver */}
-                <div className="absolute top-[12%] left-[5%] md:left-[12%] text-7xl md:text-[10rem] animate-[bounce_5s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,255,255,0.2)] opacity-80 select-none grayscale contrast-200 -rotate-12">
+                <div className="absolute top-[12%] left-[5%] md:left-[12%] text-5xl md:text-[10rem] animate-[bounce_5s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,255,255,0.2)] opacity-60 md:opacity-80 select-none grayscale contrast-200 -rotate-12">
                     🫧
                 </div>
                 {/* Bottom Left: Laptop */}
-                <div className="absolute bottom-[20%] left-[8%] md:left-[20%] text-7xl md:text-[9rem] animate-[bounce_6s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,200,255,0.5)] opacity-80 select-none delay-1000 -rotate-12">
+                <div className="absolute bottom-[20%] left-[8%] md:left-[20%] text-5xl md:text-[9rem] animate-[bounce_6s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,200,255,0.5)] opacity-60 md:opacity-80 select-none delay-1000 -rotate-12">
                     💻
                 </div>
                 {/* Top Right: Blue Solid Fist / Box */}
-                <div className="absolute top-[15%] right-[5%] md:right-[15%] text-7xl md:text-[9rem] animate-[bounce_4s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,100,255,0.6)] opacity-80 select-none delay-500 rotate-[15deg]">
+                <div className="absolute top-[15%] right-[5%] md:right-[15%] text-5xl md:text-[9rem] animate-[bounce_4s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(0,100,255,0.6)] opacity-60 md:opacity-80 select-none delay-500 rotate-[15deg]">
                     🧊
                 </div>
                 {/* Bottom Right: Rocket */}
-                <div className="absolute bottom-[25%] right-[8%] md:right-[20%] text-7xl md:text-[9rem] animate-[bounce_7s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,100,0,0.6)] opacity-80 select-none delay-700 -rotate-12">
+                <div className="absolute bottom-[25%] right-[8%] md:right-[20%] text-5xl md:text-[9rem] animate-[bounce_7s_ease-in-out_infinite_alternate] drop-shadow-[0_20px_40px_rgba(255,100,0,0.6)] opacity-60 md:opacity-80 select-none delay-700 -rotate-12">
                     🚀
                 </div>
 
@@ -82,7 +82,7 @@ const About = () => {
             </section>
 
             {/* The Light Themed Contact Section */}
-            <section className="w-full bg-[#f4f5f7] rounded-t-[4rem] px-8 md:px-16 lg:px-24 pt-32 pb-16 relative overflow-hidden mt-20" id="contact">
+            <section className="w-full bg-[#f4f5f7] rounded-t-[2.5rem] md:rounded-t-[4rem] px-6 md:px-16 lg:px-24 pt-24 md:pt-32 pb-16 relative overflow-hidden mt-16 md:mt-20" id="contact">
                 {/* 3D Balloon Shape Abstract using CSS */}
                 <div className="absolute top-[30%] -left-12 md:left-4 w-40 h-40 md:w-64 md:h-64 rounded-[40%_60%_70%_30%] bg-gradient-to-tr from-[#9333ea] via-[#c084fc] to-[#e879f9] shadow-[0_20px_50px_rgba(147,51,234,0.6)] opacity-90 transition-transform duration-700 animate-[spin_20s_linear_infinite] pointer-events-none drop-shadow-2xl mix-blend-multiply"></div>
                 {/* Yellow shape floating right */}
@@ -105,7 +105,7 @@ const About = () => {
                             <div>
                                 <input name="name" placeholder="Full Name*" required className="w-full bg-transparent border-b border-gray-400 pb-3 text-sm text-[#111] placeholder:text-gray-500 font-bold tracking-wide focus:outline-none focus:border-purple-600 transition-colors" type="text" />
                             </div>
-                            <div className="grid grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
                                     <input name="email" placeholder="Email*" required className="w-full bg-transparent border-b border-gray-400 pb-3 text-sm text-[#111] placeholder:text-gray-500 font-bold tracking-wide focus:outline-none focus:border-purple-600 transition-colors" type="email" />
                                 </div>

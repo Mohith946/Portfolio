@@ -32,10 +32,10 @@ const ProjectDetail = () => {
             
             {/* Header */}
             <div className="pt-40 pb-20 text-center max-w-4xl px-8 w-full z-10">
-                <h2 className="text-5xl md:text-7xl font-headline font-black leading-tight text-white mb-6 uppercase tracking-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-headline font-black leading-tight text-white mb-4 md:mb-6 uppercase tracking-tight">
                     Technical Arsenal
                 </h2>
-                <p className="text-sm md:text-xl text-outline-variant font-bold tracking-[0.3em] uppercase mb-16">
+                <p className="text-xs sm:text-sm md:text-xl text-outline-variant font-bold tracking-[0.3em] uppercase mb-12 md:mb-16">
                     Languages & Frameworks
                 </p>
             </div>
@@ -44,9 +44,9 @@ const ProjectDetail = () => {
             <div className="w-full relative mb-8 flex overflow-hidden">
                 <div className="animate-marquee-left flex items-center gap-8 md:gap-12 px-4 md:px-6">
                     {marqueeLogos.map((tech, idx) => (
-                        <div key={`row1-${idx}`} className="flex-shrink-0 w-40 h-40 md:w-56 md:h-56 rounded-[2rem] md:rounded-[3rem] bg-[#08090a] border border-outline-variant/30 flex flex-col items-center justify-center p-6 transition-transform hover:scale-105 hover:border-primary/50 group">
-                            <img src={tech.icon} alt={tech.name} className="w-16 h-16 md:w-20 md:h-20 object-contain mb-4 md:mb-6 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_20px_rgba(143,245,255,0.4)]" />
-                            <span className="text-white font-bold tracking-widest text-[8px] md:text-[10px] uppercase">{tech.name}</span>
+                        <div key={`row1-${idx}`} className="flex-shrink-0 w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-[1.5rem] md:rounded-[3rem] bg-[#08090a] border border-outline-variant/30 flex flex-col items-center justify-center p-4 sm:p-6 transition-transform hover:scale-105 hover:border-primary/50 group">
+                            <img src={tech.icon} alt={tech.name} className="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain mb-2 sm:mb-4 md:mb-6 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_20px_rgba(143,245,255,0.4)]" />
+                            <span className="text-white font-bold tracking-widest text-[8px] md:text-[10px] uppercase text-center">{tech.name}</span>
                         </div>
                     ))}
                 </div>
@@ -56,9 +56,9 @@ const ProjectDetail = () => {
             <div className="w-full relative mb-40 flex overflow-hidden">
                 <div className="animate-marquee-right flex items-center gap-8 md:gap-12 px-4 md:px-6">
                     {doubleReverseLogos.map((tech, idx) => (
-                        <div key={`row2-${idx}`} className="flex-shrink-0 w-40 h-40 md:w-56 md:h-56 rounded-[2rem] md:rounded-[3rem] bg-[#050505] border border-outline-variant/20 flex flex-col items-center justify-center p-6 transition-transform hover:scale-105 hover:border-secondary/50 group">
-                            <img src={tech.icon} alt={tech.name} className="w-16 h-16 md:w-20 md:h-20 object-contain mb-4 md:mb-6 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_20px_rgba(172,137,255,0.4)]" />
-                            <span className="text-outline-variant font-bold tracking-widest text-[8px] md:text-[10px] uppercase group-hover:text-white transition-colors">{tech.name}</span>
+                        <div key={`row2-${idx}`} className="flex-shrink-0 w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-[1.5rem] md:rounded-[3rem] bg-[#050505] border border-outline-variant/20 flex flex-col items-center justify-center p-4 sm:p-6 transition-transform hover:scale-105 hover:border-secondary/50 group">
+                            <img src={tech.icon} alt={tech.name} className="w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain mb-2 sm:mb-4 md:mb-6 opacity-70 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_20px_rgba(172,137,255,0.4)]" />
+                            <span className="text-outline-variant font-bold tracking-widest text-[8px] md:text-[10px] uppercase text-center group-hover:text-white transition-colors">{tech.name}</span>
                         </div>
                     ))}
                 </div>

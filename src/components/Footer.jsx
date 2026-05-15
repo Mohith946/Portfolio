@@ -3,11 +3,11 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="w-full bg-[#f4f5f7] px-4 md:px-12 pb-12 pt-0 z-20 relative">
-            <div className="w-full max-w-7xl mx-auto bg-[#08090a] rounded-t-[3rem] rounded-b-[2rem] px-8 py-16 md:px-16 md:py-24 text-white flex flex-col md:flex-row justify-between items-start shadow-2xl">
+            <div className="w-full max-w-7xl mx-auto bg-[#08090a] rounded-t-3xl md:rounded-t-[3rem] rounded-b-2xl md:rounded-b-[2rem] px-6 py-12 md:px-16 md:py-24 text-white flex flex-col md:flex-row justify-between items-start shadow-2xl">
                
                {/* Left side: Logo & Email */}
-               <div className="mb-16 md:mb-0">
-                   <h2 className="text-7xl font-headline font-black tracking-tighter text-outline-variant mb-6 inline-block border-b-4 border-outline-variant/30 pb-2">
+               <div className="mb-12 md:mb-0">
+                   <h2 className="text-6xl md:text-7xl font-headline font-black tracking-tighter text-outline-variant mb-4 md:mb-6 inline-block border-b-4 border-outline-variant/30 pb-2">
                        MLA
                    </h2>
                    <p className="text-xs font-bold text-outline-variant/60 tracking-widest lowercase mt-2">                     mohithla24@gmail.com
@@ -15,7 +15,7 @@ const Footer = () => {
                </div>
                
                {/* Right side: Links Grid */}
-               <div className="flex gap-20 md:gap-32">
+               <div className="flex flex-col sm:flex-row gap-10 sm:gap-20 md:gap-32">
                    {/* Social Links */}
                    <div>
                        <span className="text-[10px] uppercase font-bold tracking-widest block mb-8 text-white">SOCIAL</span>

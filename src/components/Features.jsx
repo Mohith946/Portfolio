@@ -10,7 +10,7 @@ const Features = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     
                     {/* Card 1: Quality Focus */}
-                    <div className="bg-[#0f0f11] rounded-[1.5rem] p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
+                    <div className="bg-[#0f0f11] rounded-3xl md:rounded-[1.5rem] p-6 md:p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
                         <div className="text-[#e2b973] mb-2">
                             {/* Simple Podium Diagram SVG */}
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -24,7 +24,7 @@ const Features = () => {
                     </div>
 
                     {/* Card 2: Reliable Communication */}
-                    <div className="bg-[#0f0f11] rounded-[1.5rem] p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
+                    <div className="bg-[#0f0f11] rounded-3xl md:rounded-[1.5rem] p-6 md:p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
                         <div className="text-[#3ed096] mb-2">
                             {/* Chat Bubble with Dots SVG */}
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
@@ -38,7 +38,7 @@ const Features = () => {
                     </div>
 
                     {/* Card 3: On-Time Delivery */}
-                    <div className="bg-[#0f0f11] rounded-[1.5rem] p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
+                    <div className="bg-[#0f0f11] rounded-3xl md:rounded-[1.5rem] p-6 md:p-10 flex flex-col items-start gap-4 border border-white/5 hover:border-white/10 transition-colors shadow-2xl">
                         <div className="text-[#f58fee] mb-2">
                             {/* Stopwatch SVG */}
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

@@ -62,8 +62,8 @@ const About = () => {
 
                     {/* Centered Paragraph */}
                     <p className="text-gray-300 text-sm md:text-xl font-body font-bold leading-relaxed max-w-2xl mx-auto mb-16 px-4">
-                        I am a 3rd-year B.Tech Computer Science and Engineering student passionate about coding and problem-solving.<br />
-                        I have skills in Java, Python, and web development,and I enjoy building projects that bring ideas to life.<br />
+                        I am a 4th-year B.Tech Computer Science and Engineering student passionate about coding and problem-solving.<br />
+                        I have skills in c++, Java, and web development,and I enjoy building projects that bring ideas to life.<br />
                         I am continuously learning and working towards becoming a skilled software engineer.<br />
 
                         <span className="block mt-2">Let's create something amazing together.</span>
@@ -74,7 +74,7 @@ const About = () => {
                         {/* Subtle outer glow matching the fill */}
                         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] opacity-40 blur-lg group-hover:opacity-70 transition-opacity duration-300"></div>
                         <a href="#contact" className="relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] border border-white/30 hover:scale-105 transition-all duration-300 shadow-2xl">
-                            <span className="relative z-10 text-white text-xs md:text-sm font-bold uppercase tracking-[0.25em] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">CONTACT ME</span>
+                            <span className="relative z-10 text-white text-xs md:text-sm font-bold uppercase tracking-[0.25em] ">CONTACT ME</span>
                         </a>
                     </div>
 

@@ -50,58 +50,94 @@ const projects = [
 
 const Showcase = () => {
   return (
-    <section className="px-4 md:px-12 max-w-7xl mx-auto pt-40 pb-20 w-full relative z-20" id="projects">
-      {/* Header */}
+    <section className="px-6 md:px-12 max-w-7xl mx-auto pt-32 pb-24 w-full relative z-20" id="projects">
+      {/* Section Header */}
       <header className="mb-0 md:mb-16 flex justify-center w-full relative">
-        <h1 className="projects-title text-center">My Works</h1>
+
+        <h2 className="projects-title text-center">
+          My Works
+        </h2>
       </header>
 
-      {/* Project Stack */}
-      <div className="flex flex-col gap-12 lg:gap-24 relative w-full pb-[100vh]">
-        {projects.map((project, idx) => (
-          <article
-            key={idx}
-            className={`sticky ${project.top} ${project.zIndex} w-full rounded-3xl md:rounded-[2.5rem] border border-outline-variant/70 bg-[#08090a] shadow-2xl overflow-hidden pb-8 md:pb-12 transition-all duration-500 ${project.shadowHover}`}
-          >
-            {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 md:p-8 lg:px-12 lg:py-10 bg-[#08090a]">
-              <div className="flex items-center gap-4 md:gap-6">
-                <span className="text-6xl md:text-8xl font-headline font-black text-white">{project.number}</span>
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-outline-variant font-bold mb-1">{project.category}</span>
-                  <h3 className="text-lg md:text-xl font-bold tracking-tight text-white">{project.title}</h3>
+      {/* Unified Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full items-stretch">
+        {projects.map((project, idx) => {
+          // Define accent colors for each card to keep the modern look
+          const colors = [
+            { text: 'text-[#8ff5ff]', border: 'hover:border-[#8ff5ff]/30', glow: 'group-hover:from-[#8ff5ff]/5' },
+            { text: 'text-[#ac89ff]', border: 'hover:border-[#ac89ff]/30', glow: 'group-hover:from-[#ac89ff]/5' },
+            { text: 'text-[#ff59e3]', border: 'hover:border-[#ff59e3]/30', glow: 'group-hover:from-[#ff59e3]/5' }
+          ];
+          const color = colors[idx % colors.length];
+
+          return (
+            <article
+              key={idx}
+              className="group relative flex flex-col justify-between rounded-[2.5rem] border border-white/5 bg-[#0e0f12] p-8 shadow-2xl hover:border-white/10 hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-500"
+            >
+              <div>
+                {/* Header */}
+                <div className="flex justify-between items-start mb-6">
+                  <div>
+                    <span className={`text-[10px] uppercase tracking-[0.25em] font-headline font-bold ${color.text}`}>
+                      {project.category}
+                    </span>
+                    <h4 className="text-sm text-gray-400 font-semibold mt-1">
+                      {project.title}
+                    </h4>
+                  </div>
+                  <span className={`text-4xl font-headline font-black text-white/10 group-hover:${color.text}/20 transition-colors duration-300`}>
+                    {project.number}
+                  </span>
+                </div>
+
+                {/* Image Wrapper */}
+                <div className="relative rounded-2xl overflow-hidden bg-black/40 border border-white/5 p-4 flex items-center justify-center min-h-[200px] md:min-h-[240px] group-hover:border-white/10 transition-colors duration-300">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full max-h-[220px] object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-tr from-transparent ${color.glow} to-transparent transition-all duration-500 pointer-events-none rounded-xl`} />
                 </div>
               </div>
-              <div className="mt-6 md:mt-0">
-                <a href="#" className="border border-outline-variant/70 text-white px-6 md:px-8 py-3 rounded-[2rem] text-[10px] md:text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-all inline-block uppercase">
-                  LIVE PROJECT
-                </a>
-              </div>
-            </div>
 
-            {/* Project Details */}
-            <div className="px-6 md:px-8 lg:px-12 pb-6 md:pb-8 text-outline-variant text-sm md:text-base">
-              <p className="mb-4 text-white font-semibold">Tech Stack: <span className="text-outline-variant font-normal">{project.techStack}</span></p>
-              <ul className="list-disc pl-5 space-y-2">
-                {project.description.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
+              {/* Footer Info */}
+              <div className="mt-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-headline font-bold text-white tracking-tight">
+                    {project.title}
+                  </h3>
+                  <div className="text-gray-400 text-sm mt-3 space-y-2 leading-relaxed">
+                    {project.description.map((desc, i) => (
+                      <p key={i}>{desc}</p>
+                    ))}
+                  </div>
+                </div>
 
-            {/* Image Grid */}
-            <div className="px-6 md:px-8 lg:px-12">
-              <div className={`relative rounded-2xl md:rounded-[2.5rem] overflow-hidden group h-56 sm:h-64 md:h-[400px] border border-outline-variant/30 bg-[#0d0d0d]`}>
-                <img
-                  src={project.image}
-                  className={`w-full h-full object-cover ${project.imgClass || ''} group-hover:scale-105 transition-transform duration-700`}
-                  alt={project.title}
-                  loading="lazy"
-                />
+                {/* Tech Stack & Action */}
+                <div className="mt-8 pt-6 border-t border-white/5 flex flex-col gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.split(', ').map((tech, i) => (
+                      <span key={i} className="text-[10px] font-bold tracking-wide uppercase px-2.5 py-1 rounded-md bg-white/5 text-gray-400 border border-white/5 hover:border-white/20 hover:text-white transition-colors duration-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href="#"
+                    className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${color.text} hover:text-white transition-colors duration-300 self-start mt-2`}
+                  >
+                    LIVE PROJECT
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </section>
   );

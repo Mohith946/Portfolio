@@ -24,7 +24,6 @@ const featureData = [
 const Features = () => {
     return (
         <section 
-            style={{ marginTop: '-100vh' }} 
             className="relative z-[50] bg-[#050505] w-full border-t border-outline-variant/30"
         >
             <div className="w-full max-w-7xl mx-auto px-4 md:px-12 pt-32 pb-16 z-20">

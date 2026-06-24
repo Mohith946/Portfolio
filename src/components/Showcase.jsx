@@ -53,7 +53,7 @@ const Showcase = () => {
     <section className="px-4 md:px-12 max-w-7xl mx-auto pt-40 pb-20 w-full relative z-20" id="projects">
       {/* Header */}
       <header className="mb-0 md:mb-16 flex justify-center w-full relative">
-        <h1 className="projects-title text-center">PROJECTS</h1>
+        <h1 className="projects-title text-center">My Works</h1>
       </header>
 
       {/* Project Stack */}

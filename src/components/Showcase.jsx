@@ -16,7 +16,8 @@ const projects = [
     image: project1Image,
     top: 'top-[80px] md:top-[120px]',
     zIndex: 'z-10',
-    shadowHover: 'hover:shadow-[0_0_50px_rgba(143,245,255,0.05)]'
+    shadowHover: 'hover:shadow-[0_0_50px_rgba(143,245,255,0.05)]',
+    link: '#'
   },
   {
     number: '02',
@@ -30,7 +31,8 @@ const projects = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBXL5I8Y5iw3CkW_lme2Oqn2CREods2ScxeymFJBSJuQgYJRN-tZMGMAUthtI_QkpF4j3fbopUjd5tiI-jI0tOSgJofGb1tGzKBOqMQ--We58B0LJwLbO4IPUbjVY26Vrp3WnSIhfZaePqZs9IiPzUXq8lu2e2uK0jaMTDJiVm-8pP-dZpa50jC8lV2Y5NaPELsN5OtbDhxAaLnBB3UXcAQ2Z3bRVVfw2KZeyGjq8px6G72xl2kU7634xzn1va2xt_WsoQ2-Av0PPXR',
     top: 'top-[100px] md:top-[240px]',
     zIndex: 'z-20',
-    shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(172,137,255,0.05)]'
+    shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(172,137,255,0.05)]',
+    link: '#'
   },
   {
     number: '03',
@@ -45,7 +47,8 @@ const projects = [
     top: 'top-[120px] md:top-[360px]',
     zIndex: 'z-30',
     shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(255,89,227,0.05)]',
-    imgClass: 'object-top'
+    imgClass: 'object-top',
+    link: '#'
   },
   {
     number: '04',
@@ -60,7 +63,8 @@ const projects = [
     image: project4Image,
     top: 'top-[140px] md:top-[480px]',
     zIndex: 'z-40',
-    shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(143,245,255,0.05)]'
+    shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(143,245,255,0.05)]',
+    link: 'https://dvgpolice.vercel.app/'
   }
 ];
 
@@ -142,7 +146,9 @@ const Showcase = () => {
                     ))}
                   </div>
                   <a
-                    href="#"
+                    href={project.link || "#"}
+                    target={project.link && project.link !== '#' ? "_blank" : undefined}
+                    rel={project.link && project.link !== '#' ? "noopener noreferrer" : undefined}
                     className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${color.text} hover:text-white transition-colors duration-300 self-start mt-2`}
                   >
                     LIVE PROJECT

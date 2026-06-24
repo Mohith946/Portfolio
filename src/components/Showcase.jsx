@@ -1,6 +1,7 @@
 import React from 'react';
 import project1Image from '../assets/project1.png';
 import project3Image from '../assets/project3.png';
+import project4Image from '../assets/project4.png';
 
 const projects = [
   {
@@ -45,6 +46,21 @@ const projects = [
     zIndex: 'z-30',
     shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(255,89,227,0.05)]',
     imgClass: 'object-top'
+  },
+  {
+    number: '04',
+    category: 'POLICE THEFT MANAGEMENT & RECOVERY SYSTEM',
+    title: 'SHIELD Protocol Console',
+    techStack: 'React.js, Node.js, Express.js, MongoDB, Tailwind CSS',
+    description: [
+      'Developed a secure, full-stack law enforcement command console for real-time tracking of stolen assets, suspect profiles, and citizen theft complaints.',
+      'Built an automated property-matching algorithm that compares stolen item logs against recovered goods to instantly calculate matching probability scores.',
+      'Implemented mobile-responsive QR-code scanning for rapid evidence verification and geopinned incident mapping.'
+    ],
+    image: project4Image,
+    top: 'top-[140px] md:top-[480px]',
+    zIndex: 'z-40',
+    shadowHover: 'hover:shadow-[0_-20px_50px_rgba(0,0,0,0.8),0_0_50px_rgba(143,245,255,0.05)]'
   }
 ];
 
@@ -66,7 +82,8 @@ const Showcase = () => {
           const colors = [
             { text: 'text-[#8ff5ff]', border: 'hover:border-[#8ff5ff]/30', glow: 'group-hover:from-[#8ff5ff]/5' },
             { text: 'text-[#ac89ff]', border: 'hover:border-[#ac89ff]/30', glow: 'group-hover:from-[#ac89ff]/5' },
-            { text: 'text-[#ff59e3]', border: 'hover:border-[#ff59e3]/30', glow: 'group-hover:from-[#ff59e3]/5' }
+            { text: 'text-[#ff59e3]', border: 'hover:border-[#ff59e3]/30', glow: 'group-hover:from-[#ff59e3]/5' },
+            { text: 'text-[#8ff5ff]', border: 'hover:border-[#8ff5ff]/30', glow: 'group-hover:from-[#8ff5ff]/5' }
           ];
           const color = colors[idx % colors.length];
 

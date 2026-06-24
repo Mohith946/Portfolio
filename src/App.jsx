@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import './index.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const Showcase = lazy(() => import('./components/Showcase'))
 const Features = lazy(() => import('./components/Features'))
@@ -38,6 +39,7 @@ function App() {
           <Footer />
         </Suspense>
       </div>
+      <SpeedInsights />
     </div>
   )
 }

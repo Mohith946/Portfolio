@@ -66,7 +66,7 @@ const projects = [
 
 const Showcase = () => {
   return (
-    <section className="px-6 md:px-12 max-w-7xl mx-auto pt-32 pb-24 w-full relative z-20" id="projects">
+    <section className="px-6 md:px-12 max-w-[96rem] mx-auto pt-32 pb-24 w-full relative z-20" id="projects">
       {/* Section Header */}
       <header className="mb-0 md:mb-16 flex justify-center w-full relative">
 
@@ -76,7 +76,7 @@ const Showcase = () => {
       </header>
 
       {/* Unified Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full items-stretch">
         {projects.map((project, idx) => {
           // Define accent colors for each card to keep the modern look
           const colors = [

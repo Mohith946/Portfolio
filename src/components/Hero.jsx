@@ -76,8 +76,8 @@ const Hero = () => {
                 <div className="mt-4 md:mt-0 relative group">
                     {/* Subtle outer glow matching the fill */}
                     <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] opacity-40 blur-lg group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <a 
-                        href="#contact" 
+                    <a
+                        href="#contact"
                         onClick={(e) => handleScroll(e, 'contact')}
                         className="relative inline-flex items-center justify-center px-10 py-4 md:px-12 md:py-4 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] border border-white/30 hover:scale-105 transition-all duration-300 shadow-2xl"
                     >

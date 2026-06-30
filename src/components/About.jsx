@@ -26,6 +26,15 @@ const About = () => {
             setResult(data.message);
         }
     };
+
+    const handleScroll = (e, targetId) => {
+        e.preventDefault();
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
         <div className="w-full relative z-20">
             {/* The 3D Floating About Me Section */}
@@ -73,7 +82,11 @@ const About = () => {
                     <div className="relative group">
                         {/* Subtle outer glow matching the fill */}
                         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] opacity-40 blur-lg group-hover:opacity-70 transition-opacity duration-300"></div>
-                        <a href="#contact" className="relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] border border-white/30 hover:scale-105 transition-all duration-300 shadow-2xl">
+                        <a 
+                            href="#contact" 
+                            onClick={(e) => handleScroll(e, 'contact')}
+                            className="relative inline-flex items-center justify-center px-12 py-5 rounded-full bg-gradient-to-r from-[#1b0b3b] via-[#d62898] to-[#fbb059] border border-white/30 hover:scale-105 transition-all duration-300 shadow-2xl"
+                        >
                             <span className="relative z-10 text-white text-xs md:text-sm font-bold uppercase tracking-[0.25em] ">CONTACT ME</span>
                         </a>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import project1Image from '../assets/project1.png';
 import project3Image from '../assets/project3.png';
 import project4Image from '../assets/project4.png';
@@ -86,15 +86,39 @@ const Showcase = () => {
   const [activeTab, setActiveTab] = useState('works');
   const [displayTab, setDisplayTab] = useState('works');
   const [isFading, setIsFading] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef(null);
 
   const handleTabChange = (tab) => {
     if (tab === activeTab) return;
     setIsFading(true);
     setActiveTab(tab);
+    setActiveIndex(0);
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
     setTimeout(() => {
       setDisplayTab(tab);
       setIsFading(false);
     }, 300);
+  };
+
+  const handleScroll = (e) => {
+    const container = e.target;
+    const scrollLeft = container.scrollLeft;
+    const cards = container.children;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      const distance = Math.abs(card.offsetLeft - scrollLeft - container.offsetLeft);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = i;
+      }
+    }
+    setActiveIndex(closestIndex);
   };
 
   const items = displayTab === 'works' ? projects : games;
@@ -125,16 +149,19 @@ const Showcase = () => {
       </header>
 
       {/* Unified Grid */}
-      <div className={`grid grid-cols-1 ${items.length === 1
-          ? 'max-w-md mx-auto w-full'
+      <div 
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className={`flex overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-pl-6 pb-6 md:pb-0 md:overflow-x-visible md:snap-none md:grid ${items.length === 1
+          ? 'md:grid-cols-1 max-w-md mx-auto w-full'
           : items.length === 2
             ? 'md:grid-cols-2 max-w-4xl mx-auto w-full'
             : items.length === 3
               ? 'md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto w-full'
               : 'md:grid-cols-2 lg:grid-cols-4 w-full'
-        } gap-8 items-stretch transition-all duration-300 ease-out transform ${
+        } gap-4 md:gap-8 items-stretch transition-all duration-300 ease-out transform ${
           isFading ? 'opacity-0 scale-[0.98] translate-y-4' : 'opacity-100 scale-100 translate-y-0'
-        }`}>
+        } relative`}>
         {items.map((project, idx) => {
           // Define accent colors for each card to keep the modern look
           const colors = [
@@ -148,7 +175,7 @@ const Showcase = () => {
           return (
             <article
               key={idx}
-              className="group relative flex flex-col justify-between rounded-[2.5rem] border border-white/5 bg-[#0e0f12] p-8 shadow-2xl hover:border-white/10 hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-500"
+              className="group relative flex flex-col justify-between rounded-[2.5rem] border border-white/5 bg-[#0e0f12] p-8 shadow-2xl hover:border-white/10 hover:shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-500 w-[78vw] sm:w-[55vw] md:w-auto shrink-0 md:shrink snap-start"
             >
               <div>
                 {/* Header */}
@@ -241,6 +268,34 @@ const Showcase = () => {
           );
         })}
       </div>
+
+      {/* Pagination Dots (Mobile Only) */}
+      {items.length > 1 && (
+        <div className="flex md:hidden justify-center items-center gap-2 mt-8">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                if (scrollRef.current) {
+                  const card = scrollRef.current.children[i];
+                  if (card) {
+                    scrollRef.current.scrollTo({
+                      left: card.offsetLeft - 24, // Account for scroll-pl-6 (24px)
+                      behavior: 'smooth'
+                    });
+                  }
+                }
+              }}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                activeIndex === i 
+                  ? 'w-6 bg-gradient-to-r from-[#8ff5ff] to-[#ac89ff]' 
+                  : 'w-2 bg-white/20 hover:bg-white/40'
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

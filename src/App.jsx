@@ -1,14 +1,13 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import './index.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Showcase from './components/Showcase'
+import Features from './components/Features'
+import ProjectDetail from './components/ProjectDetail'
+import About from './components/About'
+import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/react"
-
-const Showcase = lazy(() => import('./components/Showcase'))
-const Features = lazy(() => import('./components/Features'))
-const ProjectDetail = lazy(() => import('./components/ProjectDetail'))
-const About = lazy(() => import('./components/About'))
-const Footer = lazy(() => import('./components/Footer'))
 
 function App() {
   return (
@@ -28,16 +27,12 @@ function App() {
         <Nav />
         <main className="flex flex-col items-center">
           <Hero />
-          <Suspense fallback={<div className="h-20" />}>
-            <Showcase />
-            <Features />
-            <ProjectDetail />
-            <About />
-          </Suspense>
+          <Showcase />
+          <Features />
+          <ProjectDetail />
+          <About />
         </main>
-        <Suspense fallback={null}>
-          <Footer />
-        </Suspense>
+        <Footer />
       </div>
       <SpeedInsights />
     </div>

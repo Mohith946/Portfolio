@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import avatarImg from '../../assets/images/avatar.png';
+import { Beam } from './GridBeam';
 
 const Hero = () => {
     // State to track cursor position for 3D parallax effect
@@ -34,6 +35,20 @@ const Hero = () => {
 
     return (
         <section className="relative w-full h-[100vh] min-h-[700px] bg-[#050505] overflow-hidden flex flex-col items-center justify-center" id="home">
+
+            {/* Grid Pattern Background only for Hero */}
+            <div className="absolute inset-0 bg-grid-surface-variant opacity-25 z-0 pointer-events-none"></div>
+
+            {/* Animated Grid Beams (constrained to Hero) */}
+            <div className="absolute top-[12%] left-[10%] w-[156px] h-[63px] z-0 pointer-events-none">
+                <Beam />
+            </div>
+            <div className="absolute top-[40%] right-[15%] w-[156px] h-[63px] z-0 pointer-events-none">
+                <Beam />
+            </div>
+            <div className="absolute bottom-[30%] left-[25%] w-[156px] h-[63px] z-0 pointer-events-none">
+                <Beam />
+            </div>
 
             {/* The Massive Background Text */}
             <div className="absolute top-[20%] md:top-[15%] w-full z-0 font-headline font-black text-[18vw] sm:text-[12vw] leading-[0.8] text-[#c9c9c9] tracking-[-0.05em] select-none flex justify-center" style={textStyle}>

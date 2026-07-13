@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -10,17 +10,45 @@ import Footer from './components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+      if (!isHovering) setIsHovering(true);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [isHovering]);
+
   return (
     <div className="relative overflow-clip w-full h-full min-h-screen">
       {/* Background Decorative Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full blur-[150px]"></div>
-        <div className="absolute inset-0 bg-grid-glow"></div>
-        {/* Dynamic "Particle" Floating Elements */}
-        <div className="absolute top-[20%] left-[15%] w-1 h-1 bg-primary rounded-full shadow-[0_0_10px_#8ff5ff]"></div>
-        <div className="absolute top-[60%] right-[20%] w-2 h-2 bg-secondary rounded-full shadow-[0_0_12px_#ac89ff]"></div>
-        <div className="absolute bottom-[30%] left-[25%] w-1.5 h-1.5 bg-tertiary rounded-full shadow-[0_0_8px_#ff59e3]"></div>
+        {/* Ambient base glows */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#8ff5ff]/8 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#ac89ff]/8 rounded-full blur-[180px]"></div>
+        <div className="absolute top-[40%] left-[30%] w-[45%] h-[45%] bg-[#ff59e3]/5 rounded-full blur-[140px]"></div>
+
+        {/* Dynamic Mouse Spotlight Glow */}
+        {isHovering && (
+          <div
+            className="absolute rounded-full pointer-events-none transition-opacity duration-500 blur-[100px]"
+            style={{
+              left: `${mousePos.x - 220}px`,
+              top: `${mousePos.y - 220}px`,
+              width: '440px',
+              height: '440px',
+              background: 'radial-gradient(circle, rgba(143, 245, 255, 0.12) 0%, rgba(172, 137, 255, 0.06) 50%, transparent 100%)',
+            }}
+          />
+        )}
+
+        {/* Dot Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-dot-pattern opacity-60"></div>
+        <div className="absolute inset-0 bg-grid-glow opacity-30"></div>
       </div>
 
       <div className="relative z-10 font-body">

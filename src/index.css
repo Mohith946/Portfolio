@@ -36,6 +36,10 @@ body {
 .bg-grid-glow {
     background-image: radial-gradient(circle at 50% 50%, rgba(143, 245, 255, 0.05) 0%, transparent 70%);
 }
+.bg-dot-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+    background-size: 28px 28px;
+}
 .ghost-border { border: 1px solid rgba(71, 72, 73, 0.15); }
 .depth-shadow { box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5), 0px 0px 15px rgba(143, 245, 255, 0.05); }
 .tech-badge {

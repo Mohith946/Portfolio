@@ -11,8 +11,7 @@ const projects = [
     title: 'AI Surveillance Dashboard',
     techStack: 'React.js, TypeScript, Python, Tailwind CSS',
     description: [
-      'Developed a real-time AI surveillance dashboard for live object detection and monitoring using YOLOv8 and OpenCV with optimized video streaming.',
-      'Built an interactive analytics dashboard with WebSocket-based real-time updates.'
+      'Real-time surveillance dashboard with live object detection using YOLOv8, OpenCV, and WebSockets.'
     ],
     image: project1Image,
     top: 'top-[80px] md:top-[120px]',
@@ -26,8 +25,7 @@ const projects = [
     title: 'AI Crowd Control System',
     techStack: 'PostgreSQL, Next.js, TypeScript, tRPC',
     description: [
-      'Developed an AI-based crowd monitoring system using real-time object detection to improve public safety.',
-      'Implemented YOLOv8 with optimized data pipelines for detecting crowd density and potential threats.'
+      'Crowd monitoring application utilizing YOLOv8 computer vision to detect density and potential threats.'
     ],
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBXL5I8Y5iw3CkW_lme2Oqn2CREods2ScxeymFJBSJuQgYJRN-tZMGMAUthtI_QkpF4j3fbopUjd5tiI-jI0tOSgJofGb1tGzKBOqMQ--We58B0LJwLbO4IPUbjVY26Vrp3WnSIhfZaePqZs9IiPzUXq8lu2e2uK0jaMTDJiVm-8pP-dZpa50jC8lV2Y5NaPELsN5OtbDhxAaLnBB3UXcAQ2Z3bRVVfw2KZeyGjq8px6G72xl2kU7634xzn1va2xt_WsoQ2-Av0PPXR',
     top: 'top-[100px] md:top-[240px]',
@@ -41,8 +39,7 @@ const projects = [
     title: 'Event Registration System',
     techStack: 'Node.js, Express.js, HTML, JavaScript, Tailwind CSS, REST API',
     description: [
-      'Developed a full-stack event registration platform with REST APIs for event management, participant registrations, and seat tracking.',
-      'Built a secure admin dashboard with CRUD operations, validation mechanisms, and a responsive Tailwind CSS interface with dark/light mode support.'
+      'Full-stack management system with secure admin dashboard, REST APIs, and responsive design.'
     ],
     image: project3Image,
     top: 'top-[120px] md:top-[360px]',
@@ -57,9 +54,7 @@ const projects = [
     title: 'SHIELD Protocol Console',
     techStack: 'React.js, Node.js, Express.js, MongoDB, Tailwind CSS',
     description: [
-      'Developed a secure, full-stack law enforcement command console for real-time tracking of stolen assets, suspect profiles, and citizen theft complaints.',
-      'Built an automated property-matching algorithm that compares stolen item logs against recovered goods to instantly calculate matching probability scores.',
-      'Implemented mobile-responsive QR-code scanning for rapid evidence verification and geopinned incident mapping.'
+      'Law enforcement asset tracker utilizing automated matching algorithms and QR code verification.'
     ],
     image: project4Image,
     top: 'top-[140px] md:top-[480px]',
